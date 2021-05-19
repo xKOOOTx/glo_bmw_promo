@@ -1,5 +1,6 @@
 const tabsHandlerElems = document.querySelectorAll('[data-tabs-handler]');
 const tabsFieldElems = document.querySelectorAll('[data-tabs-field]');
+const tabsHeaderElems = document.querySelectorAll('[data-tabs-header]');
 
 for (const tab of tabsHandlerElems) {
     tab.addEventListener('click', () => {
@@ -12,6 +13,14 @@ for (const tab of tabsHandlerElems) {
         })
 
         tabsFieldElems.forEach(item => {
+            if (item.dataset.tabsField === tab.dataset.tabsHandler) {
+                item.classList.remove('hidden')
+            } else {
+                item.classList.add('hidden')
+            }
+        })
+
+        tabsHeaderElems.forEach(item => {
             if (item.dataset.tabsField === tab.dataset.tabsHandler) {
                 item.classList.remove('hidden')
             } else {
