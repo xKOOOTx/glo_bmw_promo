@@ -13,7 +13,7 @@ burgerBtn.addEventListener('click', () => {
 
 document.addEventListener('click', (event) => {
     const target = event.target;
-    if (!target.classList.contains('menu-active') && !target.classList.contains('humburger-menu')) {
+    if (!target.classList.contains('menu-active') && !target.classList.contains('humburger-menu') &&!target.classList.contains('menu-list')) {
         menuElem.classList.remove('menu-active');
         burgerBtn.classList.remove('humburger-menu-active');
     }
