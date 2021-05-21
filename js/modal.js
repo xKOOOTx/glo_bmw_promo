@@ -14,14 +14,15 @@ const closeModal = () => {
     body.style.overflow = 'auto';
 };
 
+// getting all .more buttons and adding them eventListener
 moreElems.forEach((el) => {
-    el.addEventListener('click', openModal)
-})
+    el.addEventListener('click', openModal);
+});
 
 // listening click to close modal window outside and x button
 modalElem.addEventListener('click', (event) => {
     const target = event.target;
     if (target.classList.contains('overlay') || target.classList.contains('modal__close')) {
         closeModal()
-    };
+    }
 })
