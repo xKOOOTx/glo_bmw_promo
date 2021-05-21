@@ -1,7 +1,5 @@
 const burgerBtn = document.querySelector('.humburger-menu');
 const menuElem = document.querySelector('.menu');
-const menuListElem = document.querySelector('.menu-list');
-const menuLinksElems = document.querySelectorAll('.menu-list__link');
 
 //toggling menu
 const toggleMenu = () => {
@@ -9,16 +7,8 @@ const toggleMenu = () => {
     burgerBtn.classList.toggle('humburger-menu-active');
 }
 
-/*//closing menu link click
-const closeMenu = () => {
-    menuLinksElems.forEach((el) => {
-        el.addEventListener('click', toggleMenu);
-    });
-}*/
-
-burgerBtn.addEventListener('click', (el) => {
+burgerBtn.addEventListener('click', () => {
     toggleMenu();
-    // closeMenu();
 });
 
 document.addEventListener('click', (event) => {
